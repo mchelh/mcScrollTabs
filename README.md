@@ -6,9 +6,13 @@ Compatible with jQuery 1.4.0+
 
 Usage
 =====
-
+```javascript
 $('#tabs').tabs().mcScrollTabs();
+```
 
+Options
+=====
+```javascript
 settings :
 
  	var settings = {
@@ -19,6 +23,7 @@ settings :
  		'rightIcon' : "ui-icon-carat-1-e",
  		'buttonHeight' : false,
  	}
+```
  	
  	
  	
