@@ -2,7 +2,8 @@ mcScrollTabs
 ============
 
 ScrollTabs is a jQuery plugin to create customizable and responsive tabs.
-Compatible with jQuery 1.4.0+
+Compatible with jQuery 1.4.0+ and jQuery ui 1.8.0+
+
 
 Usage
 =====
@@ -27,7 +28,7 @@ settings :
 
 screenshot
 =====
-
+like extjs
 
 ![alt tag](https://raw.github.com/mchelh/mcScrollTabs/master/0.png)
 
