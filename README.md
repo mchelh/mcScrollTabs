@@ -24,6 +24,14 @@ settings :
  		'buttonHeight' : false,
  	}
 ```
+
+screenshot
+=====
+
+
+![alt tag](https://raw.github.com/mchelh/mcScrollTabs/master/0.png)
+
+![alt tag](https://raw.github.com/mchelh/mcScrollTabs/master/1.png)
  	
  	
  	
