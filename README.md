@@ -5,6 +5,11 @@ ScrollTabs is a jQuery plugin to create customizable and responsive tabs.
 Compatible with jQuery 1.4.0+ and jQuery ui 1.8.0+
 
 
+
+Demo
+=====
+see demo : [http://mchelh.github.io/mcScrollTabs/](http://mchelh.github.io/mcScrollTabs/)
+
 Usage
 =====
 ```javascript
