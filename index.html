@@ -1,18 +1,12 @@
-<!doctype html>
-<!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="fr"> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 ie678" lang="fr"> <![endif]-->
-<!--[if IE 9]> <html class="no-js ie9" lang="fr"> <![endif]-->
-<!--[if gt IE 9]> <!--><html class="no-js" lang="fr"> <!--<![endif]-->
+<!DOCTYPE html>
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-	<title>Jquery Ui scroll tabs </title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="Mcscrolltabs : jQuery Scroll Tabs Examples">
 	<link rel="stylesheet" href="ext/jquery-ui.min.css" />
-	<link href="http://tabssortable.ps" rel="canonical" />
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="jquery.mcScrollTabs.js"></script>
@@ -94,240 +88,276 @@
 
 			});
 			function getParameterByName(name) {
-			    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-			    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-			        results = regex.exec(location.search);
-			    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+				results = regex.exec(location.search);
+				return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 			}
 		</script>
-		<style type="text/css">
-			html {
-				font-size: 69%;
-			}
-			body {
-				background-color: #fff;
-				color: #000;
-				font-size: 100%;
-				line-height: 1.5; /* adapt to your design */
-			}
-			header { padding: 18px 0 0 41%; line-height:50px;}
-			/* font-sizing for content */
-			/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
-			p,
-			ul,
-			ol,
-			dl,
-			blockquote,
-			pre,
-			td,
-			th,
-			label,
-			textarea,
-			caption,
-			details, 
-			figure, 
-			hgroup {
-				font-size: 1em; /* equiv 14px */
-				line-height: 1.5;
-				margin: 1.5em 0 0;
-			}
-			h1, .h1-like {
-				font-size: 1.8571em; /* equiv 26px */
-				font-weight: normal;
-				line-height: 1.6154em;
-				margin: .8077em 0 0 0;
-			}
-			h2, .h2-like {
-				font-size: 1.7143em; /* equiv 24px */
-				font-weight: normal;
-				line-height: 1.75em;
-				margin: .875em 0 0 0;
-			}
-			h3, .h3-like {
-				font-size: 1.5714em; /* equiv 22px */
-				font-weight: normal;
-				line-height: 1.909em;
-				margin: .9545em 0 0 0;
-			}
-			h4, .h4-like {
-				font-size: 1.4286em; /* equiv 20px */
-				font-weight: normal;
-				line-height: 1.05em;
-				margin:  1.05em 0 0 0;
-			}
-			h5, .h5-like {
-				font-size: 1.2857em; /* equiv 18px */
-				font-weight: normal;
-				line-height: 1.1667em;
-				margin:  1.1667em 0 0 0;
-			}
-			h6, .h6-like {
-				font-size: 1.1429em; /* equiv 16px */
-				font-weight: normal;
-				line-height: 1.3125em;
-				margin:  1.3125em 0 0 0;
-			}
+<style type="text/css">
+	html {
+		font-size: 69%;
+	}
+	body {
+		background-color: #fff;
+		color: #000;
+		font-size: 100%;
+		line-height: 1.5; /* adapt to your design */
+	}
+	header { padding: 18px 0 0 41%; line-height:50px;}
+	/* font-sizing for content */
+	/* preserve vertical-rythm, thanks to http://soqr.fr/vertical-rhythm/ */
+	p,
+	ul,
+	ol,
+	dl,
+	blockquote,
+	pre,
+	td,
+	th,
+	label,
+	textarea,
+	caption,
+	details, 
+	figure, 
+	hgroup {
+		font-size: 1em; /* equiv 14px */
+		line-height: 1.5;
+		margin: 1.5em 0 0;
+	}
+	h1, .h1-like {
+		font-size: 1.8571em; /* equiv 26px */
+		font-weight: normal;
+		line-height: 1.6154em;
+		margin: .8077em 0 0 0;
+	}
+	h2, .h2-like {
+		font-size: 1.7143em; /* equiv 24px */
+		font-weight: normal;
+		line-height: 1.75em;
+		margin: .875em 0 0 0;
+	}
+	h3, .h3-like {
+		font-size: 1.5714em; /* equiv 22px */
+		font-weight: normal;
+		line-height: 1.909em;
+		margin: .9545em 0 0 0;
+	}
+	h4, .h4-like {
+		font-size: 1.4286em; /* equiv 20px */
+		font-weight: normal;
+		line-height: 1.05em;
+		margin:  1.05em 0 0 0;
+	}
+	h5, .h5-like {
+		font-size: 1.2857em; /* equiv 18px */
+		font-weight: normal;
+		line-height: 1.1667em;
+		margin:  1.1667em 0 0 0;
+	}
+	h6, .h6-like {
+		font-size: 1.1429em; /* equiv 16px */
+		font-weight: normal;
+		line-height: 1.3125em;
+		margin:  1.3125em 0 0 0;
+	}
 
-			/* alternate font-sizing */
-			.smaller {
-				font-size: .7143em; /* equiv 10px */
-				line-height: 2.1em;
-			}
-			.small {
-				font-size: .8571em; /* equiv 12px */
-				line-height: 1.75em;
-			}
-			.big {
-				font-size: 1.1429em; /* equiv 16px */
-				line-height: 1.3125em;
-			}
-			.bigger {
-				font-size: 1.2857em; /* equiv 18px */
-				line-height: 1.1667em;
-			}
-			.biggest {
-				font-size: 1.4286em; /* equiv 20px */
-				line-height: 1.05em;
-			}
+	/* alternate font-sizing */
+	.smaller {
+		font-size: .7143em; /* equiv 10px */
+		line-height: 2.1em;
+	}
+	.small {
+		font-size: .8571em; /* equiv 12px */
+		line-height: 1.75em;
+	}
+	.big {
+		font-size: 1.1429em; /* equiv 16px */
+		line-height: 1.3125em;
+	}
+	.bigger {
+		font-size: 1.2857em; /* equiv 18px */
+		line-height: 1.1667em;
+	}
+	.biggest {
+		font-size: 1.4286em; /* equiv 20px */
+		line-height: 1.05em;
+	}
 
-			/* soft reset */
-			html,
-			body,
-			textarea,
-			figure,
-			label {
-				margin: 0;
-				padding: 0;
-			}
-			ul,
-			ol {
-				padding-left: 2em;
-			}
-			code, 
-			pre,
-			samp {
-				white-space: pre-wrap;
-				font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
-			}
-			code { line-height: 1em; }
-			table { margin-bottom: 1.5em; }
+	/* soft reset */
+	html,
+	body,
+	textarea,
+	figure,
+	label {
+		margin: 0;
+		padding: 0;
+	}
+	ul,
+	ol {
+		padding-left: 2em;
+	}
+	code, 
+	pre,
+	samp {
+		white-space: pre-wrap;
+		font-family: consolas, 'DejaVu Sans Mono', courier, monospace;
+	}
+	code { line-height: 1em; }
+	table { margin-bottom: 1.5em; }
 
-			/* avoid top margins on first content element */
-			p:first-child,
-			ul:first-child,
-			ol:first-child,
-			dl:first-child,
-			blockquote:first-child,
-			pre:first-child,
-			h1:first-child,
-			h2:first-child,
-			h3:first-child,
-			h4:first-child,
-			h5:first-child,
-			h6:first-child {
-				margin-top: 0;
-			}
+	/* avoid top margins on first content element */
+	p:first-child,
+	ul:first-child,
+	ol:first-child,
+	dl:first-child,
+	blockquote:first-child,
+	pre:first-child,
+	h1:first-child,
+	h2:first-child,
+	h3:first-child,
+	h4:first-child,
+	h5:first-child,
+	h6:first-child {
+		margin-top: 0;
+	}
 
-			/* avoid margins on nested elements */
-			li p,
-			li ul,
-			li ol {
-				margin-top: 0;
-				margin-bottom: 0;
-			}
+	/* avoid margins on nested elements */
+	li p,
+	li ul,
+	li ol {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
-			/* HTML5 tags */
-			article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
-				display: block;
-			}
+	/* HTML5 tags */
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+		display: block;
+	}
 
-			/* max values */
-			img, table, td, blockquote, code, pre, textarea, input, video {
-				max-width: 100%;
-			}
+	/* max values */
+	img, table, td, blockquote, code, pre, textarea, input, video {
+		max-width: 100%;
+	}
 
-			/* you shall not pass */
-			div, textarea, table, td, th, code, pre, samp {
-				word-wrap: break-word;
-				-webkit-hyphens: auto;
-				-moz-hyphens: auto;
-				-ms-hyphens: auto;
-				-o-hyphens: auto;
-				hyphens: auto;
-			}
+	/* you shall not pass */
+	div, textarea, table, td, th, code, pre, samp {
+		word-wrap: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		-o-hyphens: auto;
+		hyphens: auto;
+	}
 
-			/* pictures */
-			img {
-				width: auto;
-				height: auto;
-				vertical-align: middle;
-			}
-			a img { border: 0; }
+	/* pictures */
+	img {
+		width: auto;
+		height: auto;
+		vertical-align: middle;
+	}
+	a img { border: 0; }
 
-			/* scripts */
-			body > script {display: none !important;}
+	/* scripts */
+	body > script {display: none !important;}
 
-			/* skip-links */
-			.skip-links {
-				position: absolute;
-			}
-			.skip-links a {
-				position: absolute;
-				left: -9999px;
-				padding: 0.5em;
-				background: #000;
-				color:#fff;
-				text-decoration: none;
-			}
-			.skip-links a:focus {
-				position: static;
-			}
-			main {
-				margin: 0 auto;
-				width: 80%;
-			}
-			#tabs li .ui-icon-close {
-			    cursor: pointer;
-			    float: left;
-			    margin: 0.4em 0.2em 0 0;
-			}
-		</style>
-	</head>
-	<body>
-		<header>
-			<div id="switcher" ></div>
-			<button id="thm">button</button>
+	/* skip-links */
+	.skip-links {
+		position: absolute;
+	}
+	.skip-links a {
+		position: absolute;
+		left: -9999px;
+		padding: 0.5em;
+		background: #000;
+		color:#fff;
+		text-decoration: none;
+	}
+	.skip-links a:focus {
+		position: static;
+	}
+	main {
+		margin: 0 auto;
+		width: 80%;
+	}
+	#tabs li .ui-icon-close {
+		cursor: pointer;
+		float: left;
+		margin: 0.4em 0.2em 0 0;
+	}
+</style>
+	<title>Mcscrolltabs</title>
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<a id="forkme_banner" href="https://github.com/mchelh/mcScrollTabs">View on GitHub</a>
+
+			<h1 id="project_title">Mcscrolltabs</h1>
+			<h2 id="project_tagline">jQuery Scroll Tabs Examples</h2>
+
+			<section id="downloads">
+				<a class="zip_download_link" href="https://github.com/mchelh/mcScrollTabs/zipball/master">Download this project as a .zip file</a>
+				<a class="tar_download_link" href="https://github.com/mchelh/mcScrollTabs/tarball/master">Download this project as a tar.gz file</a>
+			</section>
+
+
 		</header>
-		<main>
-		<div id="dialog" title="Tab data">
-			<form>
-				<fieldset class="ui-helper-reset">
-					<label for="tab_title">Title</label>
-					<input type="text" name="tab_title" id="tab_title" value="Tab Title" class="ui-widget-content ui-corner-all">
-					<label for="tab_content">Content</label>
-					<textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all">Tab content</textarea>
-				</fieldset>
-			</form>
-		</div>
-		<button id="add_tab">Add Tab</button>
+	</div>
 
-		<div id="tabs" class="tabs">
-			<ul>
-				<li><a href="#tabs-1-1">Tab 1</a></li>
-				<li><a href="#tabs-2-1">Tab 2</a></li>
-				<li><a href="#tabs-3-1">Tab 3</a></li>
-				<li><a href="#tabs-4-1">Tab 4</a></li>
-				<li><a href="#tabs-5-1">Tab 5</a></li>
-				<li><a href="#tabs-6-1">Tab 6</a></li>
-	
-			</ul>
-			<div id="tabs-1-1">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</div>
-			<div id="tabs-2-1">On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</div>
-			<div id="tabs-3-1">Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.</div>
-			<div id="tabs-4-1">Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être sûr qu'il n'y a rien d'embarrassant caché dans le texte. Tous les générateurs de Lorem Ipsum sur Internet tendent à reproduire le même extrait sans fin, ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum. Iil utilise un dictionnaire de plus de 200 mots latins, en combinaison de plusieurs structures de phrases, pour générer un Lorem Ipsum irréprochable. Le Lorem Ipsum ainsi obtenu ne contient aucune répétition, ni ne contient des mots farfelus, ou des touches d'humour.</div>
-			<div id="tabs-5-1">L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour les curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont aussi reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham (1914).</div>
-			<div id="tabs-6-1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</div>
-		</div>
-		</main>
-	</body>
-	</html>
+	<!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+		<section id="main_content" class="inner">
+			<main>
+				<div id="dialog" title="Tab data">
+					<form>
+						<fieldset class="ui-helper-reset">
+							<label for="tab_title">Title</label>
+							<input type="text" name="tab_title" id="tab_title" value="Tab Title" class="ui-widget-content ui-corner-all">
+							<label for="tab_content">Content</label>
+							<textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all">Tab content</textarea>
+						</fieldset>
+					</form>
+				</div>
+				</br></br></br>
+				<div id="switcher" ></div>
+				<button id="thm">button</button>
+				</br></br></br>
+				<button id="add_tab">Add Tab</button>
+				</br></br></br>
+				<div id="tabs" class="tabs">
+					<ul>
+						<li><a href="#tabs-1-1">Tab 1</a></li>
+						<li><a href="#tabs-2-1">Tab 2</a></li>
+						<li><a href="#tabs-3-1">Tab 3</a></li>
+						<li><a href="#tabs-4-1">Tab 4</a></li>
+						<li><a href="#tabs-5-1">Tab 5</a></li>
+						<li><a href="#tabs-6-1">Tab 6</a></li>
+						
+					</ul>
+					<div id="tabs-1-1">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</div>
+					<div id="tabs-2-1">On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).</div>
+					<div id="tabs-3-1">Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.</div>
+					<div id="tabs-4-1">Plusieurs variations de Lorem Ipsum peuvent être trouvées ici ou là, mais la majeure partie d'entre elles a été altérée par l'addition d'humour ou de mots aléatoires qui ne ressemblent pas une seconde à du texte standard. Si vous voulez utiliser un passage du Lorem Ipsum, vous devez être sûr qu'il n'y a rien d'embarrassant caché dans le texte. Tous les générateurs de Lorem Ipsum sur Internet tendent à reproduire le même extrait sans fin, ce qui fait de lipsum.com le seul vrai générateur de Lorem Ipsum. Iil utilise un dictionnaire de plus de 200 mots latins, en combinaison de plusieurs structures de phrases, pour générer un Lorem Ipsum irréprochable. Le Lorem Ipsum ainsi obtenu ne contient aucune répétition, ni ne contient des mots farfelus, ou des touches d'humour.</div>
+					<div id="tabs-5-1">L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour les curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont aussi reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham (1914).</div>
+					<div id="tabs-6-1">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</div>
+				</div>
+			</main>
+		</section>
+	</div>
+
+	<!-- FOOTER -->
+	<div id="footer_wrap" class="outer">
+		<footer class="inner">
+			<p class="copyright">Mcscrolltabs maintained by <a href="https://github.com/mchelh">mchelh</a></p>
+			<p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+		</footer>
+	</div>
+
+
+
+</body>
+</html>
